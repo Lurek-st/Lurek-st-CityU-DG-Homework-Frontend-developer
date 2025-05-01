@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e8cdf1;
+}
+
+.header {
+    background-color: #e8cdf1;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.logo {
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.main-title {
+    background: linear-gradient(45deg, #81a2ff, #ff6fa4f4);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #b6a5e9d4;
+    min-width: 790px;
+    padding: 10px;
+    margin: 5px 8%;
+    box-shadow: 0 20px 20px -20px #0d0c0c;
+    border-radius: 12px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: #f9ecff;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px 20px;
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.3s;
+}
+
+.nav-list a::after {
+    content: "";
+    background: #536481;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.3s, opacity 0.3s;
+}
+
+.nav-list a:hover {
+    color: #fbdbe6;
+}
+
+.nav-list a:hover::after {
+    top: 50%;
+    opacity: 1;
+}
+
+/* Design页面特有的样式 */
+.me,
+.implementation-details {
+    background: linear-gradient(45deg, #bfccef, #fbbbd3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    margin: 20px 8%;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.me:hover,
+.implementation-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.me h2,
+.implementation-details h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.me p {
+    color: #fff;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.implementation-details section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.implementation-details h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.event-handlers p{
+    color: #fff;
+        font-size: 1.1em;
+        margin-bottom: 15px;
+}
+
+.implementation-details h4 {
+    color: #fff;
+    font-size: 1.2em;
+    margin: 15px 0 10px;
+}
+
+.implementation-details ul,
+.implementation-details ol {
+    color: #fff;
+    margin-left: 20px;
+}
+
+.implementation-details li {
+    margin: 8px 0;
+    transition: transform 0.2s ease;
+}
+
+.implementation-details li:hover {
+    transform: translateX(5px);
+}
+
+.feature {
+    border-left: 4px solid rgba(255, 255, 255, 0.3);
+    padding-left: 15px;
+    margin: 20px 0;
+}
+
+.file-structure pre {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+    overflow-x: auto;
+    font-family: monospace;
+    white-space: pre;
+    margin: 10px 0;
+}
+
+.footer {
+    background: #b6a5e9d4;
+    color: #536481;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #eedef5;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .navbar {
+        min-width: unset;
+        margin: 5px 4%;
+    }
+
+    .me,
+    .implementation-details {
+        margin: 20px 4%;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+    }
+
+    .implementation-details pre {
+        font-size: 14px;
+    }
+}

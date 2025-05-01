@@ -1,0 +1,201 @@
+.navbar{
+display: none;
+}
+.section{
+  display: none;
+}
+.form{
+  display: none;
+}
+h1{
+  display: none;
+}
+h3{
+  display: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 0;
+  background-color: #e8cdf1;
+}
+
+.header {
+  background-color: #e8cdf1;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.logo {
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.main-title {
+  background: linear-gradient(45deg, #81a2ff,
+      #ff6fa4f4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.footer {
+  background: #b6a5e9d4;
+  color: #536481;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 15px;
+
+
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #eedef5;
+
+  text-decoration: none;
+}
+
+.footer a:hover {
+
+  text-decoration: underline;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chosen-companies {
+
+  height: auto;
+  border: 1px solid rgb(248, 237, 255);
+  background: linear-gradient(45deg, #bfccef, #fbbbd3);
+
+  margin: 0px 8% 70px;
+  border-radius: 12px;
+}
+
+h2 {
+  padding-left: 80px;
+  color: #fefaff;
+}
+
+.chosen-companies p {
+  padding-left: 80px;
+  font-weight: bold;
+  color: #fef9ff;
+}
+
+#chosen-companies-table {
+  width: 67%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-left: 80px;
+
+}
+
+#chosen-companies-table th,
+#chosen-companies-table td {
+  border: 1px solid #e8b6ff7a;
+  padding: 10px;
+  text-align: left;
+  color: #fef6ff;
+}
+
+/* Set equal width for the headings */
+#chosen-companies-table th {
+  width: 33.33%;
+  background-color: #9b82e58b;
+}
+
+/* Distinct row colors for identification */
+#chosen-companies-table tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.051);
+}
+
+#chosen-companies-table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Change background color when hovering over rows */
+#chosen-companies-table tbody tr:hover {
+  background-color: #edcfff79;
+}
+
+/* Styling for submit and clear links */
+.form-actions {
+  margin-left: 80px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+}
+
+.submit-link,
+.clear-link {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  background-color: #b6a5e9d4;
+  border: 1px solid #b6a5e9d4;
+  margin-right: 5px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.submit-link:hover,
+.clear-link:hover {
+  background-color: #9b82e5d4;
+}
+
+/* Keep appearance unchanged when clicking links */
+.submit-link:active,
+.clear-link:active {
+  background-color: #9b82e5d4;
+}
+
+/* 打印页面样式 */
+@media print {
+  body {
+    font-size: 12pt;
+  }
+
+  .navbar,
+  .section{
+    display: none;
+    /* 隐藏不需要的部分 */
+  }
+
+  .footer {
+    display: block;
+    /* 保留页脚 */
+  }
+
+  .chosen-companies-table {
+    width: 100%;
+    border: 1px solid black;
+  }
+}
